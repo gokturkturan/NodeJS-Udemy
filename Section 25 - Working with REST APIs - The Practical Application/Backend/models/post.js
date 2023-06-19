@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const { post } = require("../routes/feed");
-
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema(
@@ -19,7 +17,7 @@ const postSchema = new Schema(
     },
     creator: {
       type: Object,
-      required: true,
+      required: String,
     },
   },
   { timestamps: true }
